@@ -4,14 +4,14 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-class view_employee implements ActionListener {
+public class view_employee implements ActionListener {
 
-    JFrame frame;
-    JTextField t;
-    JLabel l1, l2;
-    JButton b1, b2;
+    public JFrame frame;
+    public JTextField t;
+    public JLabel l1, l2;
+    public JButton b1, b2;
 
-    view_employee() {
+    public view_employee() {
         frame = new JFrame("View");
         frame.setBackground(Color.green);
         frame.setLayout(null);
