@@ -30,7 +30,8 @@ public class details_pageTest {
                 () -> assertNotNull(details_page.b4)
         );
 
-        assertAll("Employee Dashboard",
+        assertAll("Frame",
+                () -> assertEquals("Employee Dashboard", details_page.frame.getTitle()),
                 () -> assertEquals(Color.WHITE, details_page.frame.getBackground()),
                 () -> assertEquals(JFrame.EXIT_ON_CLOSE, details_page.frame.getDefaultCloseOperation()),
                 () -> assertEquals(450, details_page.frame.getX()),
