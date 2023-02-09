@@ -282,6 +282,57 @@ public class add_employeeTest {
                 () -> assertEquals(true, add_employee.t6.getFont().isBold())
         );
 
+        assertAll("Text Field 7",
+                () -> assertEquals(200, add_employee.t7.getX()),
+                () -> assertEquals(300, add_employee.t7.getY()),
+                () -> assertEquals(150, add_employee.t7.getWidth()),
+                () -> assertEquals(30, add_employee.t7.getHeight()),
+                () -> assertEquals("serif", add_employee.t7.getFont().getName()),
+                () -> assertEquals(15, add_employee.t7.getFont().getSize()),
+                () -> assertEquals(true, add_employee.t7.getFont().isBold())
+        );
+
+        assertAll("Text Field 8",
+                () -> assertEquals(600, add_employee.t8.getX()),
+                () -> assertEquals(300, add_employee.t8.getY()),
+                () -> assertEquals(150, add_employee.t8.getWidth()),
+                () -> assertEquals(30, add_employee.t8.getHeight()),
+                () -> assertEquals("serif", add_employee.t8.getFont().getName()),
+                () -> assertEquals(15, add_employee.t8.getFont().getSize()),
+                () -> assertEquals(true, add_employee.t8.getFont().isBold())
+        );
+
+        assertAll("Text Field 9",
+                () -> assertEquals(200, add_employee.t9.getX()),
+                () -> assertEquals(350, add_employee.t9.getY()),
+                () -> assertEquals(150, add_employee.t9.getWidth()),
+                () -> assertEquals(30, add_employee.t9.getHeight()),
+                () -> assertEquals("serif", add_employee.t9.getFont().getName()),
+                () -> assertEquals(15, add_employee.t9.getFont().getSize()),
+                () -> assertEquals(true, add_employee.t9.getFont().isBold())
+        );
+
+        assertAll("Text Field 10",
+                () -> assertEquals(600, add_employee.t10.getX()),
+                () -> assertEquals(350, add_employee.t10.getY()),
+                () -> assertEquals(150, add_employee.t10.getWidth()),
+                () -> assertEquals(30, add_employee.t10.getHeight()),
+                () -> assertEquals("serif", add_employee.t10.getFont().getName()),
+                () -> assertEquals(15, add_employee.t10.getFont().getSize()),
+                () -> assertEquals(true, add_employee.t10.getFont().isBold())
+        );
+
+        assertAll("Text Field 11",
+                () -> assertEquals(200, add_employee.t11.getX()),
+                () -> assertEquals(400, add_employee.t11.getY()),
+                () -> assertEquals(150, add_employee.t11.getWidth()),
+                () -> assertEquals(30, add_employee.t11.getHeight()),
+                () -> assertEquals("serif", add_employee.t11.getFont().getName()),
+                () -> assertEquals(15, add_employee.t11.getFont().getSize()),
+                () -> assertEquals(true, add_employee.t11.getFont().isBold())
+        );
+
+
     }
 
     @After
