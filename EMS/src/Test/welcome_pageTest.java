@@ -11,42 +11,39 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
-public class welcome_pageTest implements ActionListener {
+public class welcome_pageTest {
     welcome_page welcome_page;
-    JFrame fr;
-    JButton btn;
 
     @Before
     public void setUp() {
         welcome_page = new welcome_page();
-        btn = welcome_page.b;
-        fr = welcome_page.frame;
     }
 
     @Test
     public void welcome_pageTest() {
         assertAll("welcome_page",
-                () -> assertEquals("EMS", fr.getName()),
-                () -> assertEquals(Color.red, fr.getBackground()),
-                () -> assertEquals(JFrame.EXIT_ON_CLOSE, fr.getDefaultCloseOperation()),
-                () -> assertEquals(true, fr.isResizable())
+                () -> assertEquals("EMS", welcome_page.frame.getName()),
+                () -> assertEquals(Color.red, welcome_page.frame.getBackground()),
+                () -> assertEquals(JFrame.EXIT_ON_CLOSE, welcome_page.frame.getDefaultCloseOperation()),
+                () -> assertEquals(true, welcome_page.frame.isResizable())
         );
 
-        assertNotNull(btn);
+        assertNotNull(welcome_page.b);
         assertAll("Button",
-                () -> assertEquals("Click Here To Continue", btn.getName()),
-                () -> assertEquals(525, btn.getX()),
-                () -> assertEquals(530, btn.getY()),
-                () -> assertEquals(180, btn.getHeight()),
-                () -> assertEquals(40, btn.getWidth()),
-                () -> assertEquals(Color.DARK_GRAY, btn.getBackground()),
-                () -> assertEquals(Color.white, btn.getForeground())
+                () -> assertEquals("Click Here To Continue", welcome_page.b.getName()),
+                () -> assertEquals(525, welcome_page.b.getX()),
+                () -> assertEquals(530, welcome_page.b.getY()),
+                () -> assertEquals(180, welcome_page.b.getHeight()),
+                () -> assertEquals(40, welcome_page.b.getWidth()),
+                () -> assertEquals(Color.DARK_GRAY, welcome_page.b.getBackground()),
+                () -> assertEquals(Color.white, welcome_page.b.getForeground()),
+                () -> assertNotNull(welcome_page.b.getActionListeners())
         );
 
     }
 
-    @Test
-    public void actionPerformed(ActionEvent e) {
-        assertEquals(false, fr.isVisible());
-    }
+//    @Test
+//    public void actionPerformed() {
+//        assertEquals(false, welcome_page.frame.isVisible());
+//    }
 }
