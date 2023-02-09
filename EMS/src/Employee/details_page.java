@@ -8,12 +8,12 @@ import java.awt.event.*;
 
 public class details_page implements ActionListener {
 
-    JFrame frame;
-    JLabel l1, l2;
-    JButton b1, b2, b3, b4;
+    public JFrame frame;
+    public JLabel l1, l2;
+    public JButton b1, b2, b3, b4;
 
 
-    details_page() {
+    public details_page() {
 
         frame = new JFrame("Employee Dashboard");
         frame.setBackground(Color.WHITE);
