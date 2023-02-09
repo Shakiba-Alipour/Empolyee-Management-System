@@ -39,6 +39,30 @@ public class view_employeeTest {
                 () -> assertEquals(270, view_employee.frame.getHeight()),
                 () -> assertEquals(true, view_employee.frame.isVisible())
         );
+
+        assertAll("Label1",
+                () -> assertEquals(0, view_employee.l1.getX()),
+                () -> assertEquals(0, view_employee.l1.getY()),
+                () -> assertEquals(500, view_employee.l1.getWidth()),
+                () -> assertEquals(270, view_employee.l1.getHeight()),
+                () -> assertEquals(null, view_employee.l1.getLayout())
+        );
+        ImageIcon i1 = (ImageIcon) view_employee.l1.getIcon();
+        assertNotNull(i1);
+
+        assertAll("Employee Id Label",
+                () -> assertEquals("Employee Id", view_employee.l2.getText()),
+                () -> assertEquals(40, view_employee.l2.getX()),
+                () -> assertEquals(60, view_employee.l2.getY()),
+                () -> assertEquals(250, view_employee.l2.getWidth()),
+                () -> assertEquals(30, view_employee.l2.getHeight()),
+                () -> assertEquals("serif", view_employee.l2.getFont().getName()),
+                () -> assertEquals(30, view_employee.l2.getFont().getSize()),
+                () -> assertEquals(true, view_employee.l2.getFont().isBold()),
+                () -> assertEquals(Color.white, view_employee.l2.getForeground())
+        );
+
+
     }
 
     @After
