@@ -17,7 +17,7 @@ public class welcome_pageTest implements ActionListener {
     JButton btn;
 
     @Before
-    public void mainTest() {
+    public void setUp() {
         welcome_page = new welcome_page();
         btn = welcome_page.b;
         fr = welcome_page.frame;
