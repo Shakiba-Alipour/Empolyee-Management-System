@@ -1,20 +1,21 @@
 package Employee;
 
-import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
-import java.sql.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
 
-class login_page implements ActionListener {
+public class login_page implements ActionListener {
 
-    JFrame frame;
-    JLabel l1, l2;
-    JTextField t1;
-    JPasswordField t2;
-    JButton b1, b2;
+    public JFrame frame;
+    public JLabel l1, l2;
+    public JTextField t1;
+    public JPasswordField t2;
+    public JButton b1, b2;
 
-    login_page() {
+    public login_page() {
 
         frame = new JFrame("Login");
         frame.setBackground(Color.WHITE);
