@@ -1,18 +1,19 @@
 package Employee;
 
-import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
-import java.sql.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
-class print_data implements ActionListener {
-    JFrame f;
-    JLabel id8, id, aid, id1, aid1, id2, aid2, id3, aid3, id4, aid4, id5, aid5, id6, aid6, id7, aid7, id9, id10, id11, id12, id13, id14, id15, id16, id17, lab;
-    String emp_id, name, father, address, phone, email, education, post, age, dob, aadhar;
-    JButton b1, b2;
-    ImageIcon icon;
+public class print_data implements ActionListener {
+    public JFrame f;
+    public JLabel id8, id, aid, id1, aid1, id2, aid2, id3, aid3, id4, aid4, id5, aid5, id6, aid6, id7, aid7, id9, id10, id11, id12, id13, id14, id15, id16, id17, lab;
+    public String emp_id, name, father, address, phone, email, education, post, age, dob, aadhar;
+    public JButton b1, b2;
+    public ImageIcon icon;
 
-    print_data(String e_id) {
+    public print_data(String e_id) {
         try {
             Employee.conn co = new Employee.conn();
             String str = "select * from employee where emp_id = '" + e_id + "'";
