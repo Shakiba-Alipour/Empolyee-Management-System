@@ -110,7 +110,7 @@ public class add_employeeTest {
 
         assertAll("Age Label",
                 () -> assertEquals("Age", add_employee.label3.getText()),
-                () -> assertEquals(500, add_employee.label3.getX()),
+                () -> assertEquals(50, add_employee.label3.getX()),
                 () -> assertEquals(200, add_employee.label3.getY()),
                 () -> assertEquals(100, add_employee.label3.getWidth()),
                 () -> assertEquals(30, add_employee.label3.getHeight()),
@@ -186,7 +186,7 @@ public class add_employeeTest {
         );
 
         assertAll("Aadhar No Label",
-                () -> assertEquals("Aadhar", add_employee.label10.getText()),
+                () -> assertEquals("Aadhar No", add_employee.label10.getText()),
                 () -> assertEquals(400, add_employee.label10.getX()),
                 () -> assertEquals(350, add_employee.label10.getY()),
                 () -> assertEquals(100, add_employee.label10.getWidth()),
@@ -332,10 +332,40 @@ public class add_employeeTest {
                 () -> assertEquals(true, add_employee.t11.getFont().isBold())
         );
 
+        assertAll("Submit Button",
+                () -> assertEquals("Submit", add_employee.b1.getText()),
+                () -> assertEquals(Color.BLACK, add_employee.b1.getBackground()),
+                () -> assertEquals(Color.WHITE, add_employee.b1.getForeground()),
+                () -> assertEquals(250, add_employee.b1.getX()),
+                () -> assertEquals(550, add_employee.b1.getY()),
+                () -> assertEquals(150, add_employee.b1.getWidth()),
+                () -> assertEquals(40, add_employee.b1.getHeight())
+        );
 
+        assertAll("Submit Button",
+                () -> assertEquals("Submit", add_employee.b1.getText()),
+                () -> assertEquals(Color.BLACK, add_employee.b1.getBackground()),
+                () -> assertEquals(Color.WHITE, add_employee.b1.getForeground()),
+                () -> assertEquals(250, add_employee.b1.getX()),
+                () -> assertEquals(550, add_employee.b1.getY()),
+                () -> assertEquals(150, add_employee.b1.getWidth()),
+                () -> assertEquals(40, add_employee.b1.getHeight()),
+                () -> assertNotNull(add_employee.b1.getActionListeners())
+        );
+
+        assertAll("Cancel Button",
+                () -> assertEquals("Cancel", add_employee.b2.getText()),
+                () -> assertEquals(Color.BLACK, add_employee.b2.getBackground()),
+                () -> assertEquals(Color.WHITE, add_employee.b2.getForeground()),
+                () -> assertEquals(450, add_employee.b2.getX()),
+                () -> assertEquals(550, add_employee.b2.getY()),
+                () -> assertEquals(150, add_employee.b2.getWidth()),
+                () -> assertEquals(40, add_employee.b2.getHeight()),
+                () -> assertNotNull(add_employee.b2.getActionListeners())
+        );
     }
 
-    @After
-    public void tearDown() {
-    }
+//    @After
+//    public void tearDown() {
+//    }
 }
