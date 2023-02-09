@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class welcome_pageTest implements ActionListener {
     @Test
-    void welcome_pageTest() {
+    public void welcome_pageTest() {
         welcome_page welcome_page = new welcome_page();
         JFrame fr = welcome_page.frame;
         assertAll("welcome_page",
