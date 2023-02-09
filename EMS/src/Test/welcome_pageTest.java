@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
-public class welcome_page_test implements ActionListener {
+public class welcome_pageTest implements ActionListener {
     @Test
     void welcome_pageTest() {
         welcome_page welcome_page = new welcome_page();
