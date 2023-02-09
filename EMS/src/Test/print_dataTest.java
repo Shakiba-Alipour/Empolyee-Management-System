@@ -274,6 +274,28 @@ public class print_dataTest {
                 () -> assertEquals(true, print_data.aid7.getFont().isBold()),
                 () -> assertEquals(null, print_data.aid7.getLayout())
         );
+
+        assertAll("Print Button",
+                () -> assertEquals("Print", print_data.b1.getText()),
+                () -> assertEquals(Color.BLACK, print_data.b1.getBackground()),
+                () -> assertEquals(Color.WHITE, print_data.b1.getForeground()),
+                () -> assertEquals(100, print_data.b1.getX()),
+                () -> assertEquals(520, print_data.b1.getY()),
+                () -> assertEquals(100, print_data.b1.getWidth()),
+                () -> assertEquals(30, print_data.b1.getHeight()),
+                () -> assertNotNull(print_data.b1.getActionListeners())
+        );
+
+        assertAll("Cancel Button",
+                () -> assertEquals("Cancel", print_data.b2.getText()),
+                () -> assertEquals(Color.BLACK, print_data.b2.getBackground()),
+                () -> assertEquals(Color.WHITE, print_data.b2.getForeground()),
+                () -> assertEquals(250, print_data.b2.getX()),
+                () -> assertEquals(520, print_data.b2.getY()),
+                () -> assertEquals(100, print_data.b2.getWidth()),
+                () -> assertEquals(30, print_data.b2.getHeight()),
+                () -> assertNotNull(print_data.b2.getActionListeners())
+        );
     }
 
     @After
