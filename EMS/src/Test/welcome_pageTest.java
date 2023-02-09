@@ -1,4 +1,5 @@
 import Employee.welcome_page;
+import org.junit.Before;
 import org.junit.Test;
 
 import javax.swing.*;
@@ -11,17 +12,26 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class welcome_pageTest implements ActionListener {
+    welcome_page welcome_page;
+    JFrame fr;
+    JButton btn;
+
+    @Before
+    public void mainTest() {
+        welcome_page = new welcome_page();
+        btn = welcome_page.b;
+        fr = welcome_page.frame;
+    }
+
     @Test
     public void welcome_pageTest() {
-        welcome_page welcome_page = new welcome_page();
-        JFrame fr = welcome_page.frame;
         assertAll("welcome_page",
                 () -> assertEquals("EMS", fr.getName()),
                 () -> assertEquals(Color.red, fr.getBackground()),
                 () -> assertEquals(JFrame.EXIT_ON_CLOSE, fr.getDefaultCloseOperation()),
                 () -> assertEquals(true, fr.isResizable())
         );
-        JButton btn = welcome_page.b;
+
         assertNotNull(btn);
         assertAll("Button",
                 () -> assertEquals("Click Here To Continue", btn.getName()),
@@ -35,8 +45,8 @@ public class welcome_pageTest implements ActionListener {
 
     }
 
-    @Override
+    @Test
     public void actionPerformed(ActionEvent e) {
-
+        assertEquals(false, fr.isVisible());
     }
 }
