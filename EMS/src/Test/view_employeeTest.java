@@ -62,7 +62,33 @@ public class view_employeeTest {
                 () -> assertEquals(Color.white, view_employee.l2.getForeground())
         );
 
+        assertAll("Text Field",
+                () -> assertEquals(240, view_employee.t.getX()),
+                () -> assertEquals(60, view_employee.t.getY()),
+                () -> assertEquals(220, view_employee.t.getWidth()),
+                () -> assertEquals(30, view_employee.t.getHeight()),
+                () -> assertEquals("serif", view_employee.t.getFont().getName()),
+                () -> assertEquals(17, view_employee.t.getFont().getSize()),
+                () -> assertEquals(true, view_employee.t.getFont().isBold())
+        );
 
+        assertAll("Search Button",
+                () -> assertEquals("Search", view_employee.b1.getText()),
+                () -> assertEquals(240, view_employee.b1.getX()),
+                () -> assertEquals(150, view_employee.b1.getY()),
+                () -> assertEquals(100, view_employee.b1.getWidth()),
+                () -> assertEquals(30, view_employee.b1.getHeight()),
+                () -> assertNotNull(view_employee.b1.getActionListeners())
+        );
+
+        assertAll("Cancel Button",
+                () -> assertEquals("Cancel", view_employee.b2.getText()),
+                () -> assertEquals(360, view_employee.b2.getX()),
+                () -> assertEquals(150, view_employee.b2.getY()),
+                () -> assertEquals(100, view_employee.b2.getWidth()),
+                () -> assertEquals(30, view_employee.b2.getHeight()),
+                () -> assertNotNull(view_employee.b1.getActionListeners())
+        );
     }
 
     @After
