@@ -1,13 +1,13 @@
 import Employee.login_page;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import javax.swing.*;
 import java.awt.*;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class login_pageTest {
     login_page login_page;
@@ -101,7 +101,10 @@ public class login_pageTest {
         );
     }
 
-//    @After
-//    void tearDown() {
-//    }
+    @Test
+    @DisplayName("Action Listener Test")
+    public void actionPerformedTest() {
+        assertDoesNotThrow(() -> login_page.b1.doClick());
+        assertDoesNotThrow(() -> login_page.b2.doClick());
+    }
 }
