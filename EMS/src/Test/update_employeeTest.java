@@ -246,6 +246,23 @@ class update_employeeTest {
                 () -> assertEquals(30, update_employee.t9.getHeight())
         );
 
+        assertAll("Update Button",
+                () -> assertEquals("Update", update_employee.b.getText()),
+                () -> assertEquals(250, update_employee.b.getX()),
+                () -> assertEquals(400, update_employee.b.getY()),
+                () -> assertEquals(100, update_employee.b.getWidth()),
+                () -> assertEquals(30, update_employee.b.getHeight()),
+                () -> assertNotNull(update_employee.b.getActionListeners())
+        );
+
+        assertAll("Cancel Button",
+                () -> assertEquals("Cancel", update_employee.b1.getText()),
+                () -> assertEquals(450, update_employee.b1.getX()),
+                () -> assertEquals(400, update_employee.b1.getY()),
+                () -> assertEquals(100, update_employee.b1.getWidth()),
+                () -> assertEquals(30, update_employee.b1.getHeight()),
+                () -> assertNotNull(update_employee.b1.getActionListeners())
+        );
     }
 
     @After
