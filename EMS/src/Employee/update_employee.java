@@ -113,7 +113,9 @@ public class update_employee implements ActionListener {
         id10.setBounds(50, 300, 150, 30);
         id10.setFont(new Font("serif", Font.BOLD, 20));
         id15.add(id10);
+
         f.setVisible(false);
+
         t9 = new JTextField();
         t9.setBounds(200, 300, 150, 30);
         id15.add(t9);
