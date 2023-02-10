@@ -133,8 +133,8 @@ public class update_employee implements ActionListener {
         showData(idaa);
     }
 
-    int i = 0;
-    String age, dat;
+    public int i = 0;
+    public String age, dat;
 
     void showData(String id) {
         try {
