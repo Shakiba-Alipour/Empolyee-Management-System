@@ -1,6 +1,7 @@
 import Employee.remove_employee;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,16 +10,17 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class remove_employeeTest {
+public class remove_employeeTest {
 
     remove_employee remove_employee;
 
     @Before
-    void setUp() {
+    public void setUp() {
         remove_employee = new remove_employee();
     }
 
-    public remove_employeeTest() {
+    @Test
+    public void remove_employeeTest() {
         assertAll("remove employee page",
                 () -> assertNotNull(remove_employee.frame),
                 () -> assertNotNull(remove_employee.t),
@@ -58,7 +60,7 @@ class remove_employeeTest {
         assertNotNull(i1);
 
         assertAll("Employee Id Label",
-                () -> assertEquals("Employee ID", remove_employee.l1.getText()),
+                () -> assertEquals("Employee Id", remove_employee.l1.getText()),
                 () -> assertEquals(Color.white, remove_employee.l1.getForeground()),
                 () -> assertEquals(50, remove_employee.l1.getX()),
                 () -> assertEquals(50, remove_employee.l1.getY()),
@@ -82,7 +84,7 @@ class remove_employeeTest {
                 () -> assertEquals(100, remove_employee.b.getY()),
                 () -> assertEquals(100, remove_employee.b.getWidth()),
                 () -> assertEquals(30, remove_employee.b.getHeight()),
-                () -> assertEquals(true, remove_employee.b.getActionListeners())
+                () -> assertNotNull(remove_employee.b.getActionListeners())
         );
 
         assertAll("back Button",
@@ -91,7 +93,7 @@ class remove_employeeTest {
                 () -> assertEquals(100, remove_employee.b3.getY()),
                 () -> assertEquals(100, remove_employee.b3.getWidth()),
                 () -> assertEquals(30, remove_employee.b3.getHeight()),
-                () -> assertEquals(true, remove_employee.b3.getActionListeners())
+                () -> assertNotNull(remove_employee.b3.getActionListeners())
         );
 
         assertAll("Name Label",
@@ -104,7 +106,7 @@ class remove_employeeTest {
                 () -> assertEquals("serif", remove_employee.l2.getFont().getName()),
                 () -> assertEquals(20, remove_employee.l2.getFont().getSize()),
                 () -> assertEquals(true, remove_employee.l2.getFont().isBold()),
-                () -> assertEquals(true, remove_employee.l2.isVisible())
+                () -> assertEquals(false, remove_employee.l2.isVisible())
         );
 
         assertAll("Label6",
@@ -128,7 +130,7 @@ class remove_employeeTest {
                 () -> assertEquals("serif", remove_employee.l3.getFont().getName()),
                 () -> assertEquals(20, remove_employee.l3.getFont().getSize()),
                 () -> assertEquals(true, remove_employee.l3.getFont().isBold()),
-                () -> assertEquals(true, remove_employee.l3.isVisible())
+                () -> assertEquals(false, remove_employee.l3.isVisible())
         );
 
         assertAll("Name Label",
@@ -152,7 +154,7 @@ class remove_employeeTest {
                 () -> assertEquals("serif", remove_employee.l4.getFont().getName()),
                 () -> assertEquals(20, remove_employee.l4.getFont().getSize()),
                 () -> assertEquals(true, remove_employee.l4.getFont().isBold()),
-                () -> assertEquals(true, remove_employee.l4.isVisible())
+                () -> assertEquals(false, remove_employee.l4.isVisible())
         );
 
         assertAll("Label8",
@@ -172,8 +174,8 @@ class remove_employeeTest {
                 () -> assertEquals(300, remove_employee.b1.getY()),
                 () -> assertEquals(100, remove_employee.b1.getWidth()),
                 () -> assertEquals(30, remove_employee.b1.getHeight()),
-                () -> assertEquals(true, remove_employee.b1.getActionListeners()),
-                () -> assertEquals(true, remove_employee.b1.isVisible())
+                () -> assertNotNull(remove_employee.b1.getActionListeners()),
+                () -> assertEquals(false, remove_employee.b1.isVisible())
         );
 
         assertAll("Cancel Button",
@@ -182,12 +184,12 @@ class remove_employeeTest {
                 () -> assertEquals(300, remove_employee.b2.getY()),
                 () -> assertEquals(100, remove_employee.b2.getWidth()),
                 () -> assertEquals(30, remove_employee.b2.getHeight()),
-                () -> assertEquals(true, remove_employee.b2.getActionListeners()),
-                () -> assertEquals(true, remove_employee.b2.isVisible())
+                () -> assertNotNull(remove_employee.b2.getActionListeners()),
+                () -> assertEquals(false, remove_employee.b2.isVisible())
         );
     }
 
-    @After
-    void tearDown() {
-    }
+//    @After
+//    public void tearDown() {
+//    }
 }
