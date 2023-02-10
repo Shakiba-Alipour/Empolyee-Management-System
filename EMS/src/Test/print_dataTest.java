@@ -2,6 +2,7 @@ import Employee.print_data;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -9,8 +10,8 @@ import javax.swing.*;
 import java.awt.*;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class print_dataTest {
 
@@ -294,7 +295,10 @@ public class print_dataTest {
         );
     }
 
-    @After
-    public void tearDown() {
+    @Test
+    @DisplayName("Action Listener Test")
+    public void actionPerformedTest() {
+        assertDoesNotThrow(() -> print_data.b1.doClick());
+        assertDoesNotThrow(() -> print_data.b2.doClick());
     }
 }
