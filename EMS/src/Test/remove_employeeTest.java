@@ -2,13 +2,14 @@ import Employee.remove_employee;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import javax.swing.*;
 import java.awt.*;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class remove_employeeTest {
 
@@ -189,7 +190,12 @@ public class remove_employeeTest {
         );
     }
 
-//    @After
-//    public void tearDown() {
-//    }
+    @Test
+    @DisplayName("Action Listener Test")
+    public void actionPerformedTest() {
+        assertDoesNotThrow(() -> remove_employee.b.doClick());
+        assertDoesNotThrow(() -> remove_employee.b1.doClick());
+        assertDoesNotThrow(() -> remove_employee.b2.doClick());
+        assertDoesNotThrow(() -> remove_employee.b3.doClick());
+    }
 }
