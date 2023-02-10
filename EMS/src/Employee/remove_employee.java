@@ -6,13 +6,13 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-class remove_employee implements ActionListener {
-    JFrame frame;
-    JTextField t;
-    JLabel l1, l2, l3, l4, l5, l6, l7, l8;
-    JButton b, b1, b2, b3;
+public class remove_employee implements ActionListener {
+    public JFrame frame;
+    public JTextField t;
+    public JLabel l1, l2, l3, l4, l5, l6, l7, l8;
+    public JButton b, b1, b2, b3;
 
-    remove_employee() {
+    public remove_employee() {
         frame = new JFrame("Remove Employee");
         frame.setBackground(Color.green);
         frame.setLayout(null);
