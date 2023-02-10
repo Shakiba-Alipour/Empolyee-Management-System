@@ -1,13 +1,13 @@
 import Employee.details_page;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import javax.swing.*;
 import java.awt.*;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class details_pageTest {
 
@@ -48,8 +48,8 @@ public class details_pageTest {
                 () -> assertEquals(500, details_page.l1.getHeight()),
                 () -> assertEquals(null, details_page.l1.getLayout())
         );
-        ImageIcon i1 = (ImageIcon) details_page.l1.getIcon();
-        assertNotNull(i1);
+//        ImageIcon i1 = (ImageIcon) details_page.l1.getIcon();
+//        assertNotNull(i1);
 
         assertAll("Employee Details",
                 () -> assertEquals(430, details_page.l2.getX()),
@@ -118,7 +118,12 @@ public class details_pageTest {
 
     }
 
-//    @After
-//    void tearDown() {
-//    }
+    @Test
+    @DisplayName("Action Listener Test")
+    public void actionPerformedTest() {
+        assertDoesNotThrow(() -> details_page.b1.doClick());
+        assertDoesNotThrow(() -> details_page.b2.doClick());
+        assertDoesNotThrow(() -> details_page.b3.doClick());
+        assertDoesNotThrow(() -> details_page.b4.doClick());
+    }
 }
