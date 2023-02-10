@@ -3,14 +3,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 import javax.swing.*;
-
 import java.awt.*;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class search_employeeTest {
+public class search_employeeTest {
 
     search_employee search_employee;
 
@@ -72,7 +71,23 @@ class search_employeeTest {
                 () -> assertEquals(true, search_employee.t.getFont().isBold())
         );
 
+        assertAll("Search Button",
+                () -> assertEquals("Search", search_employee.b1.getText()),
+                () -> assertEquals(240, search_employee.b1.getX()),
+                () -> assertEquals(150, search_employee.b1.getY()),
+                () -> assertEquals(100, search_employee.b1.getWidth()),
+                () -> assertEquals(30, search_employee.b1.getHeight()),
+                () -> assertNotNull(search_employee.b1.getActionListeners())
+        );
 
+        assertAll("Cancel Button",
+                () -> assertEquals("Cancel", search_employee.b2.getText()),
+                () -> assertEquals(360, search_employee.b2.getX()),
+                () -> assertEquals(150, search_employee.b2.getY()),
+                () -> assertEquals(100, search_employee.b2.getWidth()),
+                () -> assertEquals(30, search_employee.b2.getHeight()),
+                () -> assertNotNull(search_employee.b2.getActionListeners())
+        );
     }
 
 //    @After
