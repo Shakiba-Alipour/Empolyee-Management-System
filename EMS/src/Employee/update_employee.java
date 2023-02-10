@@ -5,15 +5,15 @@ import java.sql.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-class update_employee implements ActionListener {
+public class update_employee implements ActionListener {
 
-    JFrame f;
-    JLabel id, id1, id2, id3, id4, id5, id6, id7, id8, id9, id10, id11, id12, id15, lab, lab1;
-    JTextField t, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11;
-    JButton b, b1, b2, b3;
-    String id_emp;
+    public JFrame f;
+    public JLabel id, id1, id2, id3, id4, id5, id6, id7, id8, id9, id10, id11, id12, id15, lab, lab1;
+    public JTextField t, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11;
+    public JButton b, b1, b2, b3;
+    public String id_emp;
 
-    update_employee(String idaa) {
+    public update_employee(String idaa) {
 
         f = new JFrame("update Employee details");
         f.setVisible(true);
