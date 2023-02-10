@@ -183,6 +183,68 @@ class update_employeeTest {
                 () -> assertEquals(true, update_employee.id10.getFont().isBold())
         );
 
+        assertAll("Text Field 1",
+                () -> assertEquals(200, update_employee.t1.getX()),
+                () -> assertEquals(100, update_employee.t1.getY()),
+                () -> assertEquals(150, update_employee.t1.getWidth()),
+                () -> assertEquals(30, update_employee.t1.getHeight())
+        );
+
+        assertAll("Text Field 2",
+                () -> assertEquals(600, update_employee.t2.getX()),
+                () -> assertEquals(100, update_employee.t2.getY()),
+                () -> assertEquals(150, update_employee.t2.getWidth()),
+                () -> assertEquals(30, update_employee.t2.getHeight())
+        );
+
+        assertAll("Text Field 3",
+                () -> assertEquals(200, update_employee.t3.getX()),
+                () -> assertEquals(150, update_employee.t3.getY()),
+                () -> assertEquals(150, update_employee.t3.getWidth()),
+                () -> assertEquals(30, update_employee.t3.getHeight())
+        );
+
+        assertAll("Text Field 4",
+                () -> assertEquals(600, update_employee.t4.getX()),
+                () -> assertEquals(150, update_employee.t4.getY()),
+                () -> assertEquals(150, update_employee.t4.getWidth()),
+                () -> assertEquals(30, update_employee.t4.getHeight())
+        );
+
+        assertAll("Text Field 5",
+                () -> assertEquals(200, update_employee.t5.getX()),
+                () -> assertEquals(200, update_employee.t5.getY()),
+                () -> assertEquals(150, update_employee.t5.getWidth()),
+                () -> assertEquals(30, update_employee.t5.getHeight())
+        );
+
+        assertAll("Text Field 6",
+                () -> assertEquals(600, update_employee.t6.getX()),
+                () -> assertEquals(200, update_employee.t6.getY()),
+                () -> assertEquals(150, update_employee.t6.getWidth()),
+                () -> assertEquals(30, update_employee.t6.getHeight())
+        );
+
+        assertAll("Text Field 7",
+                () -> assertEquals(200, update_employee.t7.getX()),
+                () -> assertEquals(250, update_employee.t7.getY()),
+                () -> assertEquals(150, update_employee.t7.getWidth()),
+                () -> assertEquals(30, update_employee.t7.getHeight())
+        );
+
+        assertAll("Text Field 8",
+                () -> assertEquals(600, update_employee.t8.getX()),
+                () -> assertEquals(250, update_employee.t8.getY()),
+                () -> assertEquals(150, update_employee.t8.getWidth()),
+                () -> assertEquals(30, update_employee.t8.getHeight())
+        );
+
+        assertAll("Text Field 9",
+                () -> assertEquals(200, update_employee.t9.getX()),
+                () -> assertEquals(300, update_employee.t9.getY()),
+                () -> assertEquals(150, update_employee.t9.getWidth()),
+                () -> assertEquals(30, update_employee.t9.getHeight())
+        );
 
     }
 
