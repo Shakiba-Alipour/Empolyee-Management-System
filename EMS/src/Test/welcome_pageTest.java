@@ -1,6 +1,7 @@
 import Employee.welcome_page;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,6 +11,7 @@ import java.awt.event.ActionListener;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class welcome_pageTest {
     welcome_page welcome_page;
@@ -42,8 +44,10 @@ public class welcome_pageTest {
 
     }
 
-//    @Test
-//    public void actionPerformed() {
-//        assertEquals(false, welcome_page.frame.isVisible());
-//    }
+    @Test
+    @DisplayName("Action Listener Test")
+    public void actionPerformedTest() {
+        assertDoesNotThrow(() -> welcome_page.b.doClick());
+        assertEquals(false, welcome_page.frame.isVisible());
+    }
 }
