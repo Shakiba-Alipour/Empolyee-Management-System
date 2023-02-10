@@ -16,17 +16,13 @@ public class print_dataTest {
 
     print_data print_data;
 
-    @Before
+
     @ParameterizedTest
     @ValueSource(
-            strings = {"employee id"}
+            strings = {"Print Data"}
     )
-    public void setUp(String candidate) {
+    public void print_dataTest(String candidate) {
         print_data = new print_data(candidate);
-    }
-
-    @Test
-    public void print_dataTest() {
         assertAll(
                 () -> assertNotNull(print_data.f),
                 () -> assertNotNull(print_data.id1),
