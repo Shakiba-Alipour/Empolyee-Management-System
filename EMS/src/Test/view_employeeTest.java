@@ -2,13 +2,14 @@ import Employee.view_employee;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import javax.swing.*;
 import java.awt.*;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class view_employeeTest {
     view_employee view_employee;
@@ -91,7 +92,10 @@ public class view_employeeTest {
         );
     }
 
-    @After
-    public void tearDown() {
+    @Test
+    @DisplayName("Action Listener Test")
+    public void actionPerformedTest() {
+        assertDoesNotThrow(() -> view_employee.b1.doClick());
+        assertDoesNotThrow(() -> view_employee.b2.doClick());
     }
 }
