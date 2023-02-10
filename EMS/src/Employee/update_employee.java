@@ -136,7 +136,7 @@ public class update_employee implements ActionListener {
     public int i = 0;
     public String age, dat;
 
-    void showData(String id) {
+    public void showData(String id) {
         try {
             Employee.conn con = new Employee.conn();
             String str = "select * from employee where emp_id = '" + id + "'";

@@ -1,6 +1,6 @@
 import Employee.update_employee;
-import org.junit.After;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -8,8 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class update_employeeTest {
     update_employee update_employee;
@@ -24,15 +23,6 @@ public class update_employeeTest {
         assertAll("add employee page",
                 () -> assertNotNull(update_employee.f),
                 () -> assertNotNull(update_employee.t),
-                () -> assertNotNull(update_employee.t1),
-                () -> assertNotNull(update_employee.t2),
-                () -> assertNotNull(update_employee.t3),
-                () -> assertNotNull(update_employee.t4),
-                () -> assertNotNull(update_employee.t5),
-                () -> assertNotNull(update_employee.t6),
-                () -> assertNotNull(update_employee.t7),
-                () -> assertNotNull(update_employee.t8),
-                () -> assertNotNull(update_employee.t9),
                 () -> assertNotNull(update_employee.id1),
                 () -> assertNotNull(update_employee.id10),
                 () -> assertNotNull(update_employee.id2),
@@ -266,15 +256,39 @@ public class update_employeeTest {
         );
     }
 
-//    @ParameterizedTest
-//    @ValueSource(
-//            strings = {"idaa"}
-//    )
-//    public void showDataTest(String candidate) {
-//
-//    }
-//
-//    @After
-//    public void tearDown() {
-//    }
+    @ParameterizedTest
+    @ValueSource(
+            strings = {"idaa"}
+    )
+    public void showDataTest(String candidate) {
+        update_employee.showData(candidate);
+        assertAll("text fields",
+                () -> assertNotNull(update_employee.age),
+                () -> assertNotNull(update_employee.t1),
+                () -> assertNotNull(update_employee.t2),
+                () -> assertNotNull(update_employee.t3),
+                () -> assertNotNull(update_employee.t4),
+                () -> assertNotNull(update_employee.t5),
+                () -> assertNotNull(update_employee.t6),
+                () -> assertNotNull(update_employee.t7),
+                () -> assertNotNull(update_employee.t8),
+                () -> assertNotNull(update_employee.t9),
+                () -> assertNotNull(update_employee.dat)
+        );
+
+        assertAll("frame",
+                () -> assertEquals(true, update_employee.f.isVisible()),
+                () -> assertEquals(400, update_employee.f.getX()),
+                () -> assertEquals(100, update_employee.f.getY()),
+                () -> assertEquals(900, update_employee.f.getWidth()),
+                () -> assertEquals(500, update_employee.f.getHeight())
+        );
+    }
+
+    @Test
+    @DisplayName("Action Listener Test")
+    public void actionPerformedTest() {
+        assertDoesNotThrow(() -> update_employee.b.doClick());
+        assertDoesNotThrow(() -> update_employee.b1.doClick());
+    }
 }
