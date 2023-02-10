@@ -103,7 +103,8 @@ class remove_employeeTest {
                 () -> assertEquals(30, remove_employee.l2.getHeight()),
                 () -> assertEquals("serif", remove_employee.l2.getFont().getName()),
                 () -> assertEquals(20, remove_employee.l2.getFont().getSize()),
-                () -> assertEquals(true, remove_employee.l2.getFont().isBold())
+                () -> assertEquals(true, remove_employee.l2.getFont().isBold()),
+                () -> assertEquals(true, remove_employee.l2.isVisible())
         );
 
         assertAll("Label6",
@@ -126,7 +127,8 @@ class remove_employeeTest {
                 () -> assertEquals(30, remove_employee.l3.getHeight()),
                 () -> assertEquals("serif", remove_employee.l3.getFont().getName()),
                 () -> assertEquals(20, remove_employee.l3.getFont().getSize()),
-                () -> assertEquals(true, remove_employee.l3.getFont().isBold())
+                () -> assertEquals(true, remove_employee.l3.getFont().isBold()),
+                () -> assertEquals(true, remove_employee.l3.isVisible())
         );
 
         assertAll("Name Label",
@@ -149,7 +151,8 @@ class remove_employeeTest {
                 () -> assertEquals(30, remove_employee.l4.getHeight()),
                 () -> assertEquals("serif", remove_employee.l4.getFont().getName()),
                 () -> assertEquals(20, remove_employee.l4.getFont().getSize()),
-                () -> assertEquals(true, remove_employee.l4.getFont().isBold())
+                () -> assertEquals(true, remove_employee.l4.getFont().isBold()),
+                () -> assertEquals(true, remove_employee.l4.isVisible())
         );
 
         assertAll("Label8",
@@ -161,6 +164,26 @@ class remove_employeeTest {
                 () -> assertEquals("serif", remove_employee.l8.getFont().getName()),
                 () -> assertEquals(20, remove_employee.l8.getFont().getSize()),
                 () -> assertEquals(true, remove_employee.l8.getFont().isBold())
+        );
+
+        assertAll("Remove Button",
+                () -> assertEquals("Remove", remove_employee.b1.getText()),
+                () -> assertEquals(120, remove_employee.b1.getX()),
+                () -> assertEquals(300, remove_employee.b1.getY()),
+                () -> assertEquals(100, remove_employee.b1.getWidth()),
+                () -> assertEquals(30, remove_employee.b1.getHeight()),
+                () -> assertEquals(true, remove_employee.b1.getActionListeners()),
+                () -> assertEquals(true, remove_employee.b1.isVisible())
+        );
+
+        assertAll("Cancel Button",
+                () -> assertEquals("Cancel", remove_employee.b2.getText()),
+                () -> assertEquals(300, remove_employee.b2.getX()),
+                () -> assertEquals(300, remove_employee.b2.getY()),
+                () -> assertEquals(100, remove_employee.b2.getWidth()),
+                () -> assertEquals(30, remove_employee.b2.getHeight()),
+                () -> assertEquals(true, remove_employee.b2.getActionListeners()),
+                () -> assertEquals(true, remove_employee.b2.isVisible())
         );
     }
 
