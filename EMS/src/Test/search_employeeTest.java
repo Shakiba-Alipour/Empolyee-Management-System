@@ -1,13 +1,15 @@
 import Employee.search_employee;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import javax.swing.*;
 import java.awt.*;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 public class search_employeeTest {
 
@@ -50,8 +52,8 @@ public class search_employeeTest {
         assertNotNull(i1);
 
         assertAll("Employee Id Label",
-                ()-> assertEquals("Employee Id", search_employee.l2.getText()),
-                ()->assertEquals(Color.white,search_employee.l2.getForeground()),
+                () -> assertEquals("Employee Id", search_employee.l2.getText()),
+                () -> assertEquals(Color.white, search_employee.l2.getForeground()),
                 () -> assertEquals(40, search_employee.l2.getX()),
                 () -> assertEquals(60, search_employee.l2.getY()),
                 () -> assertEquals(250, search_employee.l2.getWidth()),
@@ -90,7 +92,10 @@ public class search_employeeTest {
         );
     }
 
-//    @After
-//    void tearDown() {
-//    }
+    @Test
+    @DisplayName("Action Listener Test")
+    public void actionPerformedTest() {
+        assertDoesNotThrow(() -> search_employee.b1.doClick());
+        assertDoesNotThrow(() -> search_employee.b2.doClick());
+    }
 }
